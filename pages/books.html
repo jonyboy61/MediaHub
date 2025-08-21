@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books</title>
+  <link rel="stylesheet" href="../styles/shared.css" />
+  <link rel="stylesheet" href="../styles/books.css" />
+</head>
+<body>
+  <header class="books-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main class="content-wrapper">
+    <section class="top-bar" aria-label="Books filters and search">
+      <h1 class="books-title">Books</h1>
+        <div class="top-right">
+          <div class="search-controls">
+            <div class="searchbar-wrapper">
+          <input type="text" id="search-input" placeholder="Search..." />
+          <button id="search-btn">🔍</button>
+        </div>
+
+        <div class="counter-book">
+          <label for="book-limit">Books per page:</label>
+          <select id="book-limit" name="book-limit" aria-label="Books per page">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+          </div>
+        
+        </div>
+    </section>
+
+    <section id="books-container" aria-live="polite" aria-busy="false"></section>
+
+    <nav id="pagination" class="pagination" aria-label="Pagination">
+      <button id="prev-btn" class="pagination-button" disabled>Previous</button>
+      <button id="next-btn" class="pagination-button">Next</button>
+    </nav>
+  </main>
+
+  <noscript>Enable JavaScript to view the books list.</noscript>
+
+  <script src="../scripts/navbar.js"></script>
+  <script src="../scripts/books.js"></script>
+</body>
+</html>

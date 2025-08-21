@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie</title>
+
+  <link rel="stylesheet" href="../styles/shared.css" />
+  <link rel="stylesheet" href="../styles/movie.css" />
+</head>
+<body>
+  <header class="movie-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main class="container">
+    <button id="back-btn" aria-label="Go back">← Back</button>
+
+    <section class="movie-details" aria-live="polite" aria-busy="false">
+      <img id="movie-image" src="" alt="Movie poster" loading="lazy"/>
+
+      <div class="movie-info">
+        <h1 id="movie-title">Loading...</h1>
+        <p id="movie-meta"></p>
+        <p id="movie-genres"></p>
+        <p id="movie-runtime"></p>
+        <p id="movie-rating"></p>
+
+        <p id="movie-overview"></p>
+
+        <div class="movie-links">
+          <a id="movie-homepage" href="#" target="_blank" rel="noopener noreferrer" hidden>Official site ↗</a>
+          <a id="movie-imdb" href="#" target="_blank" rel="noopener noreferrer" hidden>IMDb ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <noscript>Enable JavaScript to view this page.</noscript>
+
+  <script src="../scripts/navbar.js" defer></script>
+  <script src="../scripts/movie.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+  <main class="landing">
+    <h1 class="title">Choose your section</h1>
+
+    <nav class="cards" aria-label="Main navigation">
+      <a class="card btn-gradient" href="pages/games.html" data-nav>🎮 Games</a>
+      <a class="card btn-gradient" href="pages/books.html" data-nav>📚 Books</a>
+      <a class="card btn-gradient" href="pages/movies.html" data-nav>🎬 Movies</a>
+    </nav>
+  </main>
+
+  <noscript>
+    <style>.landing{opacity:1;}</style>
+  </noscript>
+
+  <script>
+    // fade-out antes de navegar (transição de página simples)
+    document.querySelectorAll('[data-nav]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        // abrir nova aba deve ignorar animação
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        document.body.classList.add('leaving');
+        const url = link.getAttribute('href');
+        setTimeout(() => location.href = url, 250);
+      });
+    });
+  </script>
+</body>
+</html>

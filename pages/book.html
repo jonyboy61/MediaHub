@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Details</title>
+  <link rel="stylesheet" href="../styles/shared.css" />
+  <link rel="stylesheet" href="../styles/book.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <button id="back-btn" onclick="history.back()">⬅ Back</button>
+
+  <main class="container">
+    <div class="book-details">
+      <img id="book-image" alt="Book Cover" />
+      <div class="book-info">
+        <h1 id="book-title"></h1>
+        <p><strong>Author(s):</strong> <span id="book-authors"></span></p>
+        <p><strong>Published:</strong> <span id="book-date"></span></p>
+        <p><strong>Description:</strong></p>
+        <p id="book-description"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../scripts/navbar.js"></script>
+  <script src="../scripts/book.js"></script>
+</body>
+</html>

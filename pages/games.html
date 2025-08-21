@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/shared.css" />
+  <link rel="stylesheet" href="../styles/games.css" />
+</head>
+<body>
+  <header class="games-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main class="content-wrapper">
+    <section class="top-bar" aria-label="Games filters and search">
+      <h1 class="games-title">Games</h1>
+
+      <div class="top-right">
+        <div class="search-controls">
+          <div class="searchbar-wrapper">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-btn">🔍</button>
+          </div>
+
+          <div class="counter-game">
+            <label for="game-limit">Games per page:</label>
+            <select id="game-limit" name="game-limit" aria-label="Games per page">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="games-container" aria-live="polite" aria-busy="false"></section>
+
+    <nav id="pagination" class="pagination" aria-label="Pagination">
+      <button id="prev-btn" class="pagination-button" disabled aria-label="Previous page">Previous</button>
+      <button id="next-btn" class="pagination-button" aria-label="Next page">Next</button>
+    </nav>
+  </main>
+
+  <noscript>Enable JavaScript to view the games list.</noscript>
+
+  <!-- Scripts -->
+  <script src="../scripts/navbar.js" defer></script>
+  <script src="../scripts/games.js" defer></script>
+</body>
+</html>
